@@ -1,95 +1,68 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+      <div className="header"></div>
+      <div className={styles.content}>
+        <div className={`${styles.grid} ${styles.phone}`}>
+          <Image
+            className={styles.screen}
+            src="/screen.png"
+            alt="Tipnator Screen"
+            width={383}
+            height={772}
+            priority
+          />
+        </div>
+        <div className={styles.grid}>
+          <div className={styles.logo}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
+              className={styles.screen}
+              src="/tipnator.png"
+              alt="Tipnator Logo"
+              width={200}
+              height={200}
               priority
             />
-          </a>
+          </div>
+          <h1 className={styles.disclaimer}>
+            Tipnator: Your chill sidekick for stress-free tip calculations.
+            Easy, breezy, and as relaxed as it gets – because tipping should be
+            as simple as a summer day. Cheers to the easiest way to calculate
+            your tips!
+          </h1>
+          <div className={styles.icons}>
+            <a href="/apple">
+              <Image
+                src="/apple.png"
+                alt="App Store"
+                width={180}
+                height={53}
+                priority
+              />
+            </a>
+            <a href="/google">
+              <Image
+                src="/google.png"
+                alt="Google Play"
+                width={180}
+                height={53}
+                priority
+              />
+            </a>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+      <div className={styles.footer}>
+        <p>
+          &copy; Tipnator | <a href="/privacy-policy">Privacy Policy</a>
+        </p>
+        <a href="https://galloit.com/" target="_blank">
+          Gallo IT Consulting &amp; Solutions, LLC
         </a>
       </div>
     </main>
-  )
+  );
 }
