@@ -34,7 +34,7 @@ export default function Home() {
             your tips!
           </h1>
           <div className={styles.icons}>
-            <a href="/apple">
+            <a href="#">
               <Image
                 src="/apple.png"
                 alt="App Store"
@@ -43,7 +43,7 @@ export default function Home() {
                 priority
               />
             </a>
-            <a href="/google">
+            <a href="https://play.google.com/store/apps/details?id=com.galloit.tipnator">
               <Image
                 src="/google.png"
                 alt="Google Play"
