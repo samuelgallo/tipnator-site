@@ -34,7 +34,7 @@ export default function Home() {
             your tips!
           </h1>
           <div className={styles.icons}>
-            <a href="#">
+            <a href="https://apps.apple.com/us/app/tipnator/id6476465072">
               <Image
                 src="/apple.png"
                 alt="App Store"
